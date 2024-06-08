@@ -1,0 +1,19 @@
+<div *ngFor = "let repo of repos">
+    <mat-card>
+        <mat-card-content>
+            <h3 class="text-left"><a href={{repo.html_url}}>{{repo.name}}  </a></h3>
+            <mat-card-title-group>
+               
+                <mat-card-subtitle>
+                    <div *ngIf = "repo.description">
+                        {{repo.description}}
+                    </div>
+                     
+    <ul *ngIf="repo.topics" class="p-1 inline-block flex gap-2"> 
+        <li *ngFor = "let topic of repo.topics" class="bg-indigo-500 text-white px-3 py-1 rounded" >{{ topic }} </li>
+    </ul>
+                </mat-card-subtitle>
+            </mat-card-title-group></mat-card-content>
+      </mat-card> 
+  
+</div>

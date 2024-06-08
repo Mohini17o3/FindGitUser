@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    
+
+background-image : linear-gradient(to right top, #d29bba, #cb9bc4, #c29dce, #b4a0d8, #a3a3e0, #96ace7, #89b5eb, #7fbdec, #85cbec, #94d7ea, #a8e2e8, #bfece9);
+
+padding: 3%;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

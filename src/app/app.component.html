@@ -1,0 +1,12 @@
+<div class="grid h-screen place-items-center">
+  <div class="font-bold text-3xl">
+  
+   <router-outlet></router-outlet>
+
+  </div>
+</div>
+
+<div class="my-overlay" *ngIf="showOverlay">
+
+    <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+  </div>

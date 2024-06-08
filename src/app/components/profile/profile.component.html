@@ -1,0 +1,38 @@
+
+<div *ngIf = "profileInfo" >
+<div class="md:container md:mx-auto ">
+  <mat-paginator 
+  [length]="length"
+  [pageSize]="pageSize"
+  [pageSizeOptions]="pageSizeOptions"
+  aria-label="Select page"
+  (page)="paginatedRepo($event)"
+  >
+</mat-paginator>  
+    <mat-card>
+        <mat-card-content>
+            <mat-card-title-group>
+                <img mat-card-md-image  [src]="profileInfo.avatar_url" >
+
+                <mat-card-title>  {{profileInfo.name}}</mat-card-title>
+               <mat-card-subtitle><div *ngIf = "profileInfo.bio" > {{profileInfo.bio}} </div> 
+            
+           <div *ngIf = "profileInfo.company" > works at {{profileInfo.company}} </div>
+           <div *ngIf = "profileInfo.blog"> Blog Website : {{profileInfo.blog}} </div>
+           <div *ngIf = "profileInfo.location"> 📍  {{profileInfo.location}} </div>
+            </mat-card-subtitle>  
+
+            </mat-card-title-group>
+            <div *ngIf = "profileInfo.twitter_username"></div>   <a href="{{profileInfo.twitter_username}}"></a>
+           <a href="{{profileInfo.html_url}}"> Visit this GitHub profile  </a> 
+           <h2>All the repositories of this profile : </h2>
+           
+           <app-repository-topics [repos]="paginatedReposArray"></app-repository-topics>
+
+        </mat-card-content>
+      </mat-card>
+   
+
+</div>
+
+</div>

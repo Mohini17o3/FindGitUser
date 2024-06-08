@@ -1,0 +1,20 @@
+<header>
+<h1>Search for a <span class="text-cyan-700"> GitHub user </span> </h1>
+</header>
+<div>
+<span style="color: rgb(26, 70, 56);"><h4> (Get all info)</h4></span>
+
+</div>
+
+<div class="mb-6">
+
+<input type="text" placeholder="Github username"  [(ngModel)] ="gitUsername" > 
+</div>
+
+<button  type="submit"  (click)="searchUser()" > Search</button>
+
+<div *ngIf ="userNotFound" class="error-message">
+    This user is not found ..
+ 
+
+</div>
