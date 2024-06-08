@@ -1,4 +1,4 @@
-<a href="https://mohini17o3.github.io/Find-GitUser/">Visit the deployed site here !!</a>
+<a href="https://mohini17o3.github.io/FindGitUser/">Visit the deployed site here !!</a>
 
 # GitHub API Integration with Angular
 
